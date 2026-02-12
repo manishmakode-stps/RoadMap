@@ -1,0 +1,181 @@
+
+// Important points to learn
+1. meta tags
+2. pseudo classes and pseudo elements
+pseudo classes :
+hover - Selects an element when the user moves the mouse over it.
+:visited - Selects links that have already been visited by the user.
+:focus - Selects an element when it has keyboard focus.
+
+pseudo elements : 
+before - Inserts generated content before the actual content of an element (requires the content property).
+::after - Inserts generated content after the actual content of an element (requires the content property).
+::first-letter - Styles the first letter of the first line of a block-level element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Questions
+
+// Day-1
+1. HTML Tags, Semantic HTML, Page Structure
+Ans-> * HTML tags are fundatmental units used to create web page.
+      * Non-Semantic Tags: Tags like <div> and <span> are generic containers. They tell the browser nothing about the content inside and are primarily used for styling.
+
+      * Semantic Tags: Tags like <header>, <article>, and <footer> describe the meaning of the content they enclose. 
+
+      * Semantic HTML: Semantic HTML is the practice of using tags that clearly define their purpose
+
+
+2. What are the differences between <section>, <div>, and <article> in terms of semantics and accessibility?
+Ans->   A <div> is a generic container with no meaning used only for styling, while a <section> groups related content under a heading. An <article> is for independent, reusable content (like a blog post) that makes sense even if removed from the rest of the page.
+
+3. How would you make your page accessible to screen readers?
+Ans-> 1.Use Semantic HTML
+      2. Add Alternative Text with image tag
+      3. Logical Heading Hierachy : readers use them as table of content
+      4. Descriptive Link Text 
+      5.Use ARIA Labels : for interactive elements that don't have text like cancel button with 'X'.
+
+4. How do you structure your HTML document for SEO optimization?
+Ans-> 1. Title & Description
+      2. Canonical Link : tells seo it is not main version of the page
+      3. Language
+      4. descriptive anchors to tell crawlers what the linked page is about
+      5.Alt text with image to help rank in image search
+
+5. How does alt text help with accessibility and SEO?
+Ans-> Alt text provides a textual description for screen readers to explain images to visually impaired users, ensuring full accessibility. For SEO, it helps search engine crawlers index image content, allowing your site to rank in image search results for relevant keywords.
+
+// Day-1
+
+1. CSS Selectors, Flexbox, Colors, Fonts
+Ans-> CSS Selectors
+
+CSS selectors are used to select HTML elements that we want to style.
+They can select elements by tag, class, id, or attributes.
+Example: .box, #header, p.
+
+Flexbox
+
+Flexbox is a layout system used to arrange items in rows or columns.
+It helps in aligning, spacing, and centering elements easily.
+It is mainly used for one-dimensional layouts.
+
+Colors
+
+Colors in CSS are used to define text, background, and border colors.
+They can be written using names, hex, RGB, or HSL values.
+Good color contrast improves readability and design.
+
+Fonts
+
+Fonts control the appearance and style of text on a webpage.
+CSS uses font-family, font-size, and font-weight to style fonts.
+Google Fonts are commonly used for modern websites.
+
+
+2. What is the difference between em, rem, %, and px units? When should you use each?
+Ans-> px: Fixed unit; use when you want exact size control (e.g., borders, icons).
+em: Relative to parent font size; use for scalable components.
+rem: Relative to root (html) font size; best for consistent responsive sizing.
+%: Relative to parent size; use for flexible layouts and widths.
+
+3. How does flex-grow, flex-shrink, and flex-basis impact layout?
+Ans-> flex-grow: Controls how much an item grows when extra space is available.
+flex-shrink: Controls how much an item shrinks when space is limited.
+flex-basis: Sets the initial size of the item before growing or shrinking.
+
+4.How would you implement a dark/light theme switch using only CSS?
+Ans-> A dark/light theme can be implemented using CSS variables and a checkbox toggle with the :checked selector to change variable values.
+When the checkbox is toggled, the color variables update and the whole UI switches theme without JavaScript.
+
+5.  How can you optimize CSS to reduce render-blocking?
+Ans-> You can reduce render-blocking CSS by using smaller CSS files, removing unused CSS, and minifying the code.
+Load critical CSS inline and defer or load non-critical CSS asynchronously to speed up rendering.
+
+6. What’s the difference between inline, inline-block, and block elements in styling?
+Ans-> Block elements take the full width and always start on a new line (e.g. <div>, <p>).
+Inline elements take only the required space and do not start on a new line (e.g. <span>, <a>).
+Inline-block elements behave like inline but allow width, height, and margin/padding (e.g. styled <button>, <img>).
+
+
+Day-2
+
+1.
+
+
+
+Day-3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+??????????????????????????/
+-> if we make display flex of parent container
+-> if flex direction is row
+-> then main-axis alignment is horizontal
+-> and the cross-axis alignment is vertical
+-> to work on main-axis use property : justify-content
+-> and for cross-axis use : align-items
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create a 3-column responsive layout using Flexbox/Grid	"Make a 3-column layout: Header, Main Content, Sidebar. Ensure mobile responsiveness using media queries.
+
+Use both Flexbox and Grid in combination. Add responsiveness with breakpoints (media queries) and mobile-first styling."	
+
+
+Flexbox vs Grid, Responsive Design, Media Queries	What’s the difference between Flexbox and Grid?	How do you make a column layout responsive?	What does 'grid-template-columns: 1fr 1fr 1fr' mean?	How do you apply media queries in CSS?	What’s the role of 'align-items' in Flexbox?
+
+
+API FOR CURRENCY = https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_eVYX57CqtcclSk6g6u2qWDDssB1O78bTWWODn7rX&base_currency=EUR&currencies=INR

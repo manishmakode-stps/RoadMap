@@ -1,0 +1,41 @@
+.menu li {
+  list-style: none;
+  padding: 10px;
+  background: lightgray;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.menu li:hover {
+  background: darkgray;
+}
+
+/* First item */
+.menu li:first-child {
+  font-weight: bold;
+}
+
+/* Button hover */
+.btn {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background: green;
+}
+
+/* First letter styling */
+.text::first-letter {
+  font-size: 32px;
+  color: red;
+}
+
+/* Decorative icon */
+.text::after {
+  content: " ✔";
+  color: green;
+}

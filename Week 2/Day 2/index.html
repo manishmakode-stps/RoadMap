@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Products</h1>
+
+    <div class="container">
+        <aside class="sidebar">
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="all">All</option>
+                <option value="Home & Kitchen">Home & Kitchen</option>
+                <option value="Electronics">Electronic</option>
+                <option value="Wearable Tech">Wearable Tech</option>
+                <option value="Computer Accessories">Computer Accessories</option>
+            </select>
+            <label for="sort">Sort By</label><br>
+            <select name="sort" id="sort">
+                <option value="Default">Default</option>
+                <option value="High to Low">High to Low</option>
+                <option value="Low to High">Low to High</option>
+            </select>
+        </aside>
+
+
+        <main class="main_section">
+            <div class="search_section">
+                <input type="text" id="search" placeholder="Search Products">
+                <label for="view" id="toggle_label">List</label>
+                <input type="checkbox" id="view" >
+            </div>
+            <div class="product_section">
+                <div class="product_card ">
+                    <div class="img_container">
+                        <img class="product_img" src="https://placehold.co/600x400" alt="">
+                    </div>
+                    <div class="product_details">
+                        <div>
+                            <p class="title">Boat Earphones</p>
+                        </div>
+                        <div>
+                            <p class="stock">36</p>
+                        </div>
+                        <div>
+                            <p class="price">900</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="products.js"></script>
+</body>
+
+</html>

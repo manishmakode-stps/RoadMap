@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <form id="form">
+
+    <fieldset>
+        <legend>Personal Info</legend>
+        <label for="name">Name</label>
+        <input type="text" id="name" pattern="[A-Za-z]+" placeholder="john Doe" required value="">
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Info</legend>
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <small id="emailError" style="color:red;"></small>
+    
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" oninvalid="this.setCustomValidity('CustomError:This Phone Number is Invalid')" oninput="this.setCustomValidity('')" pattern="[0-9]{10}" required>
+    </fieldset>
+
+    <label for="message">Message</label>
+    <input type="text" id="message">
+
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

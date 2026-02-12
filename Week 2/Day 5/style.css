@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.navbar{
+    width: 99%;
+    height: 5vh;
+    background-color: burlywood;
+    margin: 2px auto;
+    border-radius: 5%;
+    display: flex;
+    font-size: 3rem;
+    justify-content:center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.reset{
+    position: absolute;
+    background-color: red;
+    border-radius: 30%;
+    right: 10%;
+    height: 2rem;
+    width: 7rem;
+    cursor: pointer;
+}
+
+.reset:hover{
+    background-color: rgb(255, 94, 94);
+}
+
+.container{
+    margin: 0.5rem;
+    display: flex;
+    height: auto;
+    width: auto;
+    gap: 0.5em;
+}
+
+.aside{
+    flex-basis: 1;
+    background-color: aqua;
+    width: 20vw;
+    font-size: 1.4rem;
+    font-weight: 500;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.quiz_container{
+    flex-basis: 1;
+    background-color: lightblue;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+    flex-wrap: wrap;
+    padding: 1em;
+    /* justify-content: space-around; */
+    position: relative;
+}
+
+.question_section{
+    background-color: green;
+    height: 35vh;
+    width: 99%;
+    display: flex;
+    padding: 2em;
+    font-size: 1.1em;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.options_section{
+    margin-top: 1em;
+    background-color: orange;
+    height: 35vh;
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+    
+}
+
+.option{
+    background-color: white;
+    width: 90%;
+    height: 5em;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option:hover{
+    background-color: rgb(255, 246, 229);
+}
+
+.note{
+    width: 10em;
+    padding: 1em 1em 1em 1em;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 5%;
+    text-align: justify;
+    border: 2px solid red;
+}
+
+
+.result{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 20%;
+    top: 15%;
+    width: 60%;
+    height: 70%;
+    background-color: rgb(255, 222, 159);
+    border: 2px solid blue;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    font-size: 4em;
+    color: blue;
+    display: none;
+}
+
+.restart{
+    background-color: rgb(0, 234, 255);
+    border-radius: 30%;
+    height: 3rem;
+    width: 7rem;
+    cursor: pointer;
+}

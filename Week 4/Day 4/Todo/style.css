@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar{
+    color: white;
+    width: 99%;
+    height: 10vh;
+    background-color: #720455;
+    margin: 2px auto;
+    border-radius: 15px;
+    display: flex;
+    font-size: 2rem;
+    justify-content:space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container{
+    margin: 0.5rem;
+    display: flex;
+    height: auto;
+    width: auto;
+    gap: 0.5em;
+}
+
+.form{
+    flex-basis: 1;
+    background-color: #3C0753;
+    border-radius: 15px;
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.form_item{
+    display: flex;
+    flex-direction: column;
+}
+
+.task_container{
+    flex-basis: 1;
+    border-radius: 15px;
+    background-color: #910A67;
+    width: 70vw;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.task{
+    height: 10em;
+    min-width: 10em;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 0.3em;
+    position: relative;
+}
+
+.deleteTask{
+    position: absolute;
+    right: 1em;
+    width: 2em;
+    height: 2em;
+    background-color: red;
+}
+
+#status{
+    margin: 0 auto;
+}
+.toggle{
+    /* border: 1px solid black; */
+    cursor: pointer;
+}
+.toggle_pending{
+    color: rgb(255, 0, 0);
+}
+
+.toggle_completed{
+    color: lightgreen;
+}

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 1em;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.grid{
+    width: 100%;
+    background-color: aqua;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid-item{
+    height: 7rem;
+    background-color: greenyellow;
+}
+
+@media(max-width:600px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:300px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <p>Persistent To do</p>
+        <div class="toggle toggle_pending">
+            View Completed
+        </div>
+    </nav>
+    <div class="container">
+        <form class="form">
+            <div class="form_item">
+                <label for="title">Enter Title</label>
+                <input type="text" id="title" required>
+            </div>
+
+            <div class="form_item">
+                <label for="desc">Enter Description</label>
+                <textarea type="text" id="desc">
+                </textarea>
+            </div>
+            <div class="form_item">
+                <label for="date">Choose Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form_item">
+                <button type="submit" style="background-color: orange; height: 2em;">Add Task</button>
+            </div>
+
+
+        </form>
+        <main class="task_container">
+            <div class="task">
+                <button class="deleteTask">X</button>
+                <p class="title">Grocery Shopping</p>
+                <hr>
+                <p class="desc">Buy milk, eggs, and bread from the local market.</p>
+                <hr>
+                <p class="date">2026-01-28</p>
+                <hr>
+                <div id="status">
+                    <label for="updStatus">Mark done</label>
+                    <input id="updStatus" type="checkbox">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

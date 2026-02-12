@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: lightblue;
+    border: 2px solid black;
+    height: 100rem;
+}
+
+.main_section{
+    background-color: lightgreen;
+    border: 2px solid black;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#search{
+    height: 2em;
+    width: 50em; 
+}
+
+.search_section{
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+    align-items: center;
+    padding: 1em 2em 0em 2em;
+}
+
+#view{
+    display: none;
+}
+#toggle_label{
+    height: auto;
+    width: auto;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 1px;
+    background-color: chocolate;
+}
+.product_section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.product_card {
+    height: 12em;
+    width: 10em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 5%;
+}
+
+.img_cointainer{
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background-color: bisque;
+    position: relative;
+}
+
+.product_img {
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    transition: transform 0.5s ease;
+}
+
+.product_details{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ************************************************************* */
+.list_view.product_section{
+    flex-direction: column;
+}
+
+.list_view .product_card{
+    height: 8em;
+    width: auto;
+    background-color: white;
+    margin: 1em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+    align-items: center;
+    padding-left: 2em;
+}
+
+.list_view .img_cointainer{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: bisque;
+    position: relative;
+}
+
+.list_view .product_img{
+    height: 10em;
+    width: 10em;
+}
+
+.list_view .product_details{
+    flex-direction: column;
+}
+

@@ -1,0 +1,21 @@
+.card {
+    background-color: white;
+    width: 10rem;
+    color: black;
+    border: 2px solid blue;
+    border-radius: 25px;
+}
+
+.img {
+    object-fit: cover;
+    aspect-ratio: 5/4;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: x-large;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

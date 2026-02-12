@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto auto;
+    height: 17rem;
+    width: 12rem;
+    border: 2px solid black;
+    background-color: rgb(47, 70, 48);
+    padding: 1rem 1rem;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+#display{
+    margin-top: 5px;
+    width: 10rem;
+    height: 3rem;
+    border: 2px solid darkgreen;
+    background-color: rgb(233, 255, 233);
+    font-size:1rem;
+    padding: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.ac{
+    background-color: rgb(255, 123, 123);
+}
+
+
