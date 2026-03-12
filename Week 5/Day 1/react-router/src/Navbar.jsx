@@ -8,6 +8,8 @@ function Navbar(){
                    <NavLink className='nav-item' to='/'>Home</NavLink>
                    <NavLink className='nav-item' to='/about'>About</NavLink>
                    <NavLink className='nav-item' to='/contact'>Contact</NavLink>
+                   <label htmlFor="toggle">Mode</label>
+                   <input type='checkBox' id='toggle' />
             </ul>
 
         </>

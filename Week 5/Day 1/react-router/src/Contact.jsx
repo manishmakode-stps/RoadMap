@@ -6,7 +6,6 @@ function Contact(){
         <h1>Contact Screen</h1>
         </div>
         </>
-
     )
 }
 

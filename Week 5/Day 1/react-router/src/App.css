@@ -1,14 +1,16 @@
-#root {
+:root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --bg-color: #242424;
 }
 
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -28,9 +30,10 @@
   color: #888;
 }
 
-.nav-bar{
+.nav-bar {
   background-color: white;
   height: 5rem;
+  color: black;
   border-radius: 15px;
   list-style: none;
   display: flex;
@@ -38,11 +41,28 @@
   align-items: center;
 }
 
-.nav-item{
+#toggle {
+  display: none;
+}
+
+#toggle:checked {
+  --bg-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: white;
+}
+
+.nav-item {
   color: black;
   font-size: larger;
   font-weight: bold;
 }
-.active{
-   color: blue;
+
+.active {
+  color: blue;
 }

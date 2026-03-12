@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, #d9edff 0%, #bde0ff 45%, #8fc8ff 100%);
+  line-height: 1.1;
+  color: #102a43;
+}
+
+#root {
+  min-height: 100vh;
+}

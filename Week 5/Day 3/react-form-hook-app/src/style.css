@@ -1,0 +1,115 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  color: #102027;
+  background-color: #f4f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.title {
+  margin: 0 0 0.4rem;
+}
+
+.subtitle {
+  margin: 0 0 2rem;
+  color: #445a64;
+}
+
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d6e2e9;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #b2c5cf;
+  background: #fcfeff;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid #8ec7e2;
+  border-color: #6fb6d8;
+}
+
+.error-text {
+  color: #b3261e;
+  font-size: 0.85rem;
+  min-height: 1.1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn-primary {
+  background-color: #0b7db3;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #e3eef4;
+  color: #0f4f6b;
+}
+
+.success {
+  margin-top: 0.9rem;
+  color: #0f6a42;
+  background: #dff5ea;
+  border: 1px solid #b4e3cd;
+  border-radius: 8px;
+  padding: 0.6rem;
+}

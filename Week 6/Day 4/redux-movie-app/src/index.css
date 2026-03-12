@@ -1,0 +1,43 @@
+:root {
+  --bg: #0b1220;
+  --panel: #111a2d;
+  --surface: #17233a;
+  --text: #e2e8f0;
+  --muted: #9ca8bf;
+  --border: #243049;
+  --shadow: rgba(2, 8, 23, 0.45);
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f7ff;
+  --panel: #eff3ff;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #d5dced;
+  --shadow: rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(circle at 15% 10%, #1d2a47 0%, var(--bg) 45%);
+  color: var(--text);
+}
+
+:root[data-theme="light"] body {
+  background: radial-gradient(circle at 10% 0%, #dbeafe 0%, var(--bg) 45%);
+}

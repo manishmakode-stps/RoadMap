@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <body>
+    <input id="msg" placeholder="Type message" />
+    <button id="send">Send</button>
+    <pre id="log"></pre>
+
+    <script>
+      const log = (m) => (document.getElementById("log").textContent += m + "\n");
+      const ws = new WebSocket("ws://localhost:8080");
+
+      ws.addEventListener("open", () => log("OPEN"));
+      ws.addEventListener("message", (e) => log("MESSAGE: " + e.data));
+      ws.addEventListener("close", () => log("CLOSE"));
+      ws.addEventListener("error", () => log("ERROR"));
+
+      document.getElementById("send").onclick = () => {
+        const value = document.getElementById("msg").value;
+        ws.send(value);
+      };
+    </script>
+  </body>
+</html>
