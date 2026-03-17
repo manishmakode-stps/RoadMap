@@ -88,6 +88,19 @@ const WithQuery = () => {
                         Next
                     </button>
                 </section>
+
+                {isFetching && (
+                    <div className="status status-loading center">Fetching new page...</div>
+                )}
+
+                <section className="post-list">
+                    {data.map((post) => (
+                        <Link to={`/with-query/${post.id}`} key={post.id} className="post-card">
+                            <h2>{post.title}</h2>
+                            <p>{post.body}</p>
+                        </Link>
+                    ))}
+                </section>
             </div>
         </div>
     );

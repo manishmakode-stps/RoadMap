@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const fetchPosts = async (page) => {
-    console.log("lkhkjahdl", page);
     const res = await axios.get(`https://jsonplaceholder.typicode.com/posts?_page=${page.pageParam}&_limit=10`);
     return res.data;
 };
@@ -16,7 +15,7 @@ const fetchPosts = async (page) => {
 const WithInfiniteQuery = () => {
 
     const { ref, inView } = useInView();
-    const { isPending, error, data, isFetching, fetchNextPage, hasNextPage, isFetchingNextPage } = useInfiniteQuery({
+    const { isPending, error, data, isFetching, fetchNextPage, hasNextPage } = useInfiniteQuery({
         queryKey: ["postData"],
         queryFn: fetchPosts,
         staleTime: 10000,
@@ -29,7 +28,6 @@ const WithInfiniteQuery = () => {
     });
 
     useEffect(() => {
-        console.log("Is in view? ", inView);
         fetchNextPage();
     }, [inView])
 
