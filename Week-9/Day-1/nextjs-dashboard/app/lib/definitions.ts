@@ -7,7 +7,10 @@ export type User = {
   name: string;
   email: string;
   password: string;
+  role: 'admin' | 'customer';
 };
+
+export type UserPublic = Omit<User, 'password'>;
 
 export type Customer = {
   id: string;

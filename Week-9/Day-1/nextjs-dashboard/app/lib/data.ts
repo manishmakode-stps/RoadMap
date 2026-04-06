@@ -6,6 +6,7 @@ import {
   InvoicesTable,
   LatestInvoiceRaw,
   Revenue,
+  UserPublic,
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -214,5 +215,19 @@ export async function fetchFilteredCustomers(query: string) {
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch customer table.');
+  }
+}
+
+export async function fetchUsers() {
+  try {
+    const users = await sql<UserPublic[]>`
+      SELECT id, name, email, role
+      FROM users
+      ORDER BY name ASC
+    `;
+    return users;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch users.');
   }
 }

@@ -20,11 +20,13 @@ const links = [
   { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ role }: { role: 'admin' | 'customer' }) {
   const pathname = usePathname();
+  const visibleLinks =
+    role === 'admin' ? links : links.filter((link) => link.name !== 'Customers');
   return (
     <>
-      {links.map((link) => {
+      {visibleLinks.map((link) => {
         const LinkIcon = link.icon;
         return (
           <Link
