@@ -1,0 +1,8 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/server-blogs": "pages/server-blogs.js",
+  "/static-blogs": "pages/static-blogs.js",
+  "/": "pages/index.js"
+}

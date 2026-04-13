@@ -1,35 +1,26 @@
-# Day 3 - Next.js Data Fetching Assignment (TypeScript)
+﻿# Blog App
 
-## Project Root
-`blog-app`
+A production-style blog project built with Next.js (Pages Router) and TypeScript.
 
-## What this project shows
-- `getStaticProps` in `pages/static-blogs.tsx` for static generation.
-- `getServerSideProps` in `pages/server-blogs.tsx` for request-time rendering.
-- Shared blog API function in `lib/fetchBlogs.ts`.
-- Reusable blog list UI in `components/BlogList.tsx`.
-- TypeScript types for props and blog data.
+## Features
+- Static blog list page with periodic regeneration (`revalidate: 60`)
+- Dynamic blog details route (`/blogs/[slug]`)
+- Pre-rendered dynamic paths using `getStaticPaths`
+- Missing route handling with `notFound: true`
+- Shared application shell with top navigation and footer
 
-## Run the project
-1. `cd blog-app`
-2. `npm install`
-3. `npm run dev`
-4. Open `http://localhost:3000`
+## Tech Stack
+- Next.js
+- React
+- TypeScript
 
-## Theory Answers
-### When should you use `getStaticProps`?
-Use it when page data does not change on every request and can be pre-rendered at build time for performance.
+## Project Structure
+- `pages/` route definitions
+- `components/` reusable UI components
+- `lib/` domain data and access helpers
+- `styles/` global styles
 
-### Difference between `getStaticProps` and `getServerSideProps`
-- `getStaticProps`: Runs at build time (and on revalidation for ISR).
-- `getServerSideProps`: Runs on every request on the server.
-
-### How do you fetch data server-side in Next.js?
-Use `getServerSideProps` and fetch data inside it, then return it through `props`.
-
-### Can you use Axios or fetch inside `getStaticProps`?
-Yes. Both are valid. In this project, native `fetch` is used.
-
-### What are `revalidate` and ISR?
-- `revalidate` is a number (seconds) in `getStaticProps`.
-- ISR (Incremental Static Regeneration) allows Next.js to update static pages in the background after the revalidate window.
+## Run Locally
+1. `npm install`
+2. `npm run dev`
+3. Open `http://localhost:3000`

@@ -20,6 +20,7 @@ export const AuthContext = ({children}) =>{
     )
 }
 
+// example of custom hook
 export const useAuth = () =>{
     return useContext(UserContext);
 }

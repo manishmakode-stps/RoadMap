@@ -1,22 +1,39 @@
-import type { Blog } from "../lib/fetchBlogs";
+﻿import Link from "next/link";
+import type { BlogPost } from "../lib/blogs";
 
 type BlogListProps = {
-  blogs: Blog[];
+  posts: BlogPost[];
 };
 
-export default function BlogList({ blogs }: BlogListProps) {
-  if (!blogs.length) {
-    return <p>No blogs found.</p>;
-  }
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
 
+export default function BlogList({ posts }: BlogListProps) {
   return (
     <ul className="blog-list">
-      {blogs.map((blog) => (
-        <li key={blog.id} className="blog-item">
-          <h3>{blog.title}</h3>
-          <p>{blog.body}</p>
+      {posts.map((post) => (
+        <li key={post.id} className="blog-item">
+          <p className="meta">
+            {formatDate(post.publishedAt)} · {post.readingTime}
+          </p>
+          <h2>{post.title}</h2>
+          <p>{post.excerpt}</p>
+          <div className="tag-row" aria-label="Tags">
+            {post.tags.map((tag) => (
+              <span key={tag} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <Link href={`/blogs/${post.slug}`}>Read article</Link>
         </li>
       ))}
     </ul>
   );
 }
+

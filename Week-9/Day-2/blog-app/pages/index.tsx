@@ -1,32 +1,20 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container">
-      <h1>Next.js Data Fetching Assignment</h1>
-      <p>
-        This mini project demonstrates <code>getStaticProps</code> and
-        <code> getServerSideProps</code> using a blog list.
-      </p>
-
-      <div className="card-grid">
-        <article className="card">
-          <h2>Static Blogs (SSG + ISR)</h2>
-          <p>
-            Generated at build time and refreshed in the background with
-            revalidation.
-          </p>
-          <Link href="/static-blogs">Open static page</Link>
-        </article>
-
-        <article className="card">
-          <h2>Server Blogs (SSR)</h2>
-          <p>
-            Rendered on every request on the server to keep data fully dynamic.
-          </p>
-          <Link href="/server-blogs">Open server page</Link>
-        </article>
-      </div>
+    <main className="container page">
+      <section className="hero">
+        <p className="eyebrow">Tech Writing Platform</p>
+        <h1>Stories and guides for modern web developers.</h1>
+        <p className="lead">
+          Explore practical posts on Next.js, routing patterns, and production-ready frontend architecture.
+        </p>
+        <div className="hero-actions">
+          <Link href="/blogs" className="button-primary">
+            Browse Posts
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
