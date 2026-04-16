@@ -7,7 +7,7 @@ const GET_POSTS = gql`
       edges {
         node {
           id
-          title
+          title 
         }
         cursor
       }
